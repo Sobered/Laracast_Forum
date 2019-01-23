@@ -28,12 +28,7 @@ class Thread extends Model
             $builder->with('channel');
         });
         static::deleting(function ($thread) {
-            // $thread->replies->each->delete();
-            // dd($thread->replies->count());
-            // $thread->replies->each(function ($reply) {
-            //     $reply->delete();
-            // });
-            $thread->replies->delete();
+            $thread->replies->each->delete();
         });
     }
 
