@@ -35,6 +35,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+        {{-- <flash message='Temporary message'></flash> --}}
+        <example></example>
     </div>
 </body>
 </html>
