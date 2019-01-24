@@ -112,7 +112,7 @@ class ThreadController extends Controller
     {
         $this->authorize('update', $thread);
 
-        $thread->replies()->delete();
+        // $thread->replies()->delete();
         $thread->delete();
 
         if (request()->wantsJson()) {
@@ -130,7 +130,6 @@ class ThreadController extends Controller
         if ($channel->exists) {
             $threads->where('channel_id', $channel->id);
         }
-        // dd($threads->toSql());
         return $threads->get();
 
     }

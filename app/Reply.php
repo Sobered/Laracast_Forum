@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Activity;
 use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model

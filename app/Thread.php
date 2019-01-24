@@ -17,6 +17,9 @@ class Thread extends Model
     protected static function boot()
     {
         parent::boot();
+        static::deleting(function ($thread) {
+            $thread->replies->each->delete();
+        });
         // For all queries of Thread, include the count of replies 
         static::addGlobalScope('replyCount', function ($builder) {
             $builder->withCount('replies');
@@ -26,9 +29,6 @@ class Thread extends Model
         });
         static::addGlobalScope('channel', function ($builder) {
             $builder->with('channel');
-        });
-        static::deleting(function ($thread) {
-            $thread->replies->each->delete();
         });
     }
 
