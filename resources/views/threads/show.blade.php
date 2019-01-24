@@ -55,9 +55,9 @@
                         </div>
                     </div>
             @else
-            <div class="row">
-                <p>Please <a href="/login">sign in</a> to participate in the discussion.</p>
-            </div>
+                <div class="row">
+                    <p>Please <a href="/login">sign in</a> to participate in the discussion.</p>
+                </div>
             @endif
         </div>
 
