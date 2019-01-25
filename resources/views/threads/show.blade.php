@@ -29,7 +29,7 @@
                     </article>
                 </div>
             </div>
-            <div class="card">
+            <div class="card mb-2 mt-2">
                 <div class="card-header bg-dark text-white">
                     Replies
                 </div>
