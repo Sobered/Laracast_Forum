@@ -19,7 +19,7 @@
                         {{ $date }}
                     </div>
                     @foreach ($activity as $record)
-                        @include ("profiles.activities.{$record->type}")
+                            @include ("profiles.activities.{$record->type}")
                     @endforeach
                 @endforeach
             </div>
